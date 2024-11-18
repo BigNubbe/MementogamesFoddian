@@ -1,0 +1,6 @@
+res://Scripts/swaparea.tscn
+res://Scripts/CamController.gd
+res://Scripts/swaparea.gd
+res://Scenes/levelbuild.tscn
+res://Scenes/swaparea.tscn
+res://Scripts/levelbuild.gd

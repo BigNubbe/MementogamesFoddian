@@ -1,0 +1,64 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1731645963
+ground.png::CompressedTexture2D::8842751850539525702::1728461576::1728461576::1::::<><>::
+icon.svg::CompressedTexture2D::515705804157031060::1728448098::1728448108::1::::<><>::
+WUntitled.png::CompressedTexture2D::3852858331291009068::1729497234::1729497235::1::::<><>::
+::res://ArtAssets/::1730102575
+Envy Level (Dif color).png::CompressedTexture2D::4647776818274066929::1730102277::1730102575::1::::<><>::
+::res://ArtAssets/EnvyLevel1/::1730102811
+Background.png::CompressedTexture2D::5495636803755465507::1730102799::1730102811::1::::<><>::
+Skull.png::CompressedTexture2D::2399377459388747871::1730102277::1730102471::1::::<><>::
+Stone 1.png::CompressedTexture2D::1341889847117028122::1730102277::1730102436::1::::<><>::
+Stone 2.png::CompressedTexture2D::4250360114918666210::1730102277::1730102439::1::::<><>::
+Stone 3.png::CompressedTexture2D::1037207931653699183::1730102277::1730102436::1::::<><>::
+Stone 4.png::CompressedTexture2D::3337479823523060220::1730102277::1730102517::1::::<><>::
+Stone 5.png::CompressedTexture2D::4837922831814934173::1730102277::1730102505::1::::<><>::
+Stone 6.png::CompressedTexture2D::8840698117581630986::1730102277::1730102492::1::::<><>::
+Stone 7.png::CompressedTexture2D::3059567828362507248::1730102277::1730102517::1::::<><>::
+Stone 8.png::CompressedTexture2D::3828668459594937495::1730102277::1730102517::1::::<><>::
+Stone 9.png::CompressedTexture2D::3588069700538354643::1730102277::1730102377::1::::<><>::
+Stone 10.png::CompressedTexture2D::7197550321304565168::1730102277::1730102377::1::::<><>::
+Stone 11.png::CompressedTexture2D::1462496972579628066::1730102277::1730102492::1::::<><>::
+Stone 12.png::CompressedTexture2D::1680459285301664588::1730102277::1730102377::1::::<><>::
+Stone 13.png::CompressedTexture2D::5808764127545605812::1730102277::1730102517::1::::<><>::
+Stone 14.png::CompressedTexture2D::3011174666177723736::1730102277::1730102517::1::::<><>::
+Stone.png::CompressedTexture2D::4615253468107361034::1730102277::1730102438::1::::<><>::
+::res://Scenes/::1731591685
+Camswapper.tscn::PackedScene::766382445265957522::1731584941::0::1::::<><>::
+crumblingplatform.tscn::PackedScene::22043350510817535::1731584941::0::1::::<><>::uid://bu5map7wn8xuq::::res://WUntitled.png<>res://Scripts/crumblingplatform.gd
+despawnsouls.tscn::PackedScene::5167023611260441491::1731584941::0::1::::<><>::res://Scripts/despawnsouls.gd
+groundplaceholder.tscn::PackedScene::1694334420595500609::1730104119::0::1::::<><>::uid://dx8q3ixbs3kjm::::res://ground.png
+latchable.tscn::PackedScene::810125459193039259::1731584939::0::1::::<><>::res://Scripts/latchable.gd<>uid://bu5map7wn8xuq::::res://WUntitled.png
+levelbuild.tscn::PackedScene::2115499603189763830::1731591685::0::1::::<><>::uid://b7hog8ffbgv1j::::res://ArtAssets/Envy Level (Dif color).png<>uid://ckkelnsc7qypf::::res://ArtAssets/EnvyLevel1/Background.png<>uid://cp546qal6swbg::::res://Scenes/LevelScenes/stone_5.tscn<>uid://btd7l5d8fwhd::::res://Scenes/LevelScenes/sidestone.tscn<>uid://dfmrpvv1ssumm::::res://Scenes/LevelScenes/stone_1.tscn<>uid://ccjdr0xgftyan::::res://Scenes/SwappedCam.tscn<>uid://b4bcnla2ydo35::::res://Scenes/LevelScenes/stone_2.tscn<>uid://bb8178illx326::::res://Scenes/LevelScenes/stone_3.tscn<>uid://ctkbjpmugk6hx::::res://Scenes/LevelScenes/stone_8.tscn<>uid://cjh84v4nkiq26::::res://Scenes/LevelScenes/stone_11.tscn<>uid://hl2umy45dj37::::res://icon.svg<>uid://dcv56raghnpdu::::res://Scenes/playerscene.tscn<>res://Scripts/Souls.gd<>uid://cfu7ehkmbrjkd::::res://Scenes/despawnsouls.tscn
+LevelScene.tscn::PackedScene::8225916055439117837::1731584941::0::1::::<><>::uid://ye0o8b8noc54::::res://Scenes/groundplaceholder.tscn<>uid://dcv56raghnpdu::::res://Scenes/playerscene.tscn<>uid://d04nkogcbndy3::::res://Scenes/RotateIllusoryInvisiblePlatform.tscn<>uid://lsowbbdyldep::::res://Scenes/latchable.tscn<>uid://kxbyxfsn816::::res://Scenes/crumblingplatform.tscn<>uid://dfmrpvv1ssumm::::res://Scenes/LevelScenes/stone_1.tscn<>uid://btd7l5d8fwhd::::res://Scenes/LevelScenes/sidestone.tscn
+playerscene.tscn::PackedScene::7344869433764116686::1731584941::0::1::::<><>::res://Scripts/playerscene.gd<>uid://hl2umy45dj37::::res://icon.svg
+RotateIllusoryInvisiblePlatform.tscn::PackedScene::8974658020431310224::1731563882::0::1::::<><>::res://Scripts/RotatingPlatform.gd<>uid://bu5map7wn8xuq::::res://WUntitled.png
+SwappedCam.tscn::PackedScene::4932012312817811413::1731589283::0::1::::<><>::res://Scripts/Camscript.gd
+::res://Scenes/LevelScenes/::1731584941
+sidestone.tscn::PackedScene::109651941630035809::1731584941::0::1::::<><>::uid://b60wsyf5d3ly5::::res://ArtAssets/EnvyLevel1/Stone.png
+stone_1.tscn::PackedScene::7536038914741137572::1730104119::0::1::::<><>::uid://teay2tj0j7og::::res://ArtAssets/EnvyLevel1/Stone 1.png
+stone_2.tscn::PackedScene::4424106755272211718::1731584941::0::1::::<><>::uid://b1s52sqpt3wes::::res://ArtAssets/EnvyLevel1/Stone 2.png
+stone_3.tscn::PackedScene::2526371526576407533::1731584941::0::1::::<><>::uid://o1owsslsk46n::::res://ArtAssets/EnvyLevel1/Stone 3.png
+stone_4.tscn::PackedScene::1584098170073035568::1730189867::0::1::::<><>::uid://bnsx2mw6ohryq::::res://ArtAssets/EnvyLevel1/Stone 4.png
+stone_5.tscn::PackedScene::5889422347895311712::1730277383::0::1::::<><>::uid://ca6r483n2ua6p::::res://ArtAssets/EnvyLevel1/Stone 5.png
+stone_6.tscn::PackedScene::7287830390011128882::1730277384::0::1::::<><>::uid://dx7rahl0vj8eg::::res://ArtAssets/EnvyLevel1/Stone 6.png
+stone_7.tscn::PackedScene::8876844952978622061::1730277384::0::1::::<><>::uid://bjucvug6775xk::::res://ArtAssets/EnvyLevel1/Stone 7.png
+stone_8.tscn::PackedScene::6127150770492386481::1730277384::0::1::::<><>::uid://busvu0lq3xy5d::::res://ArtAssets/EnvyLevel1/Stone 8.png
+stone_9.tscn::PackedScene::8732850715620792203::1730279069::0::1::::<><>::uid://brec8phc7ocgp::::res://ArtAssets/EnvyLevel1/Stone 9.png
+stone_10.tscn::PackedScene::8324121405211048891::1730279155::0::1::::<><>::uid://dassuqfr0v2fc::::res://ArtAssets/EnvyLevel1/Stone 10.png
+stone_11.tscn::PackedScene::5421048201585486133::1730279244::0::1::::<><>::uid://u3pd14atg7ac::::res://ArtAssets/EnvyLevel1/Stone 11.png
+stone_12.tscn::PackedScene::3621016812295405197::1730279338::0::1::::<><>::uid://x7a6ii4rjria::::res://ArtAssets/EnvyLevel1/Stone 12.png
+stone_13.tscn::PackedScene::6081278963369887779::1730279423::0::1::::<><>::uid://co02q472w6lro::::res://ArtAssets/EnvyLevel1/Stone 13.png
+stone_14.tscn::PackedScene::7002916834421645320::1730279507::0::1::::<><>::uid://bi5vuvqhfk1hc::::res://ArtAssets/EnvyLevel1/Stone 14.png
+::res://Scripts/::1731651049
+CamController.gd::GDScript::-1::1731649373::0::1::::<>Node<>::
+Camscript.gd::GDScript::-1::1731591606::0::1::::<>Camera2D<>::
+Camswapper.gd::GDScript::-1::1731583293::0::1::::<>Area2D<>::
+crumblingplatform.gd::GDScript::-1::1729851038::0::1::::<>Node2D<>::
+despawnsouls.gd::GDScript::-1::1731571541::0::1::::<>Node2D<>::
+latchable.gd::GDScript::-1::1731569744::0::1::::<>Node2D<>::
+playerscene.gd::GDScript::-1::1731584654::0::1::::<>CharacterBody2D<>::
+RotatingPlatform.gd::GDScript::-1::1731563882::0::1::::<>Node2D<>::
+Souls.gd::GDScript::-1::1731494930::0::1::::<>Node<>::
+swaparea.gd::GDScript::-1::1731651125::0::1::::<>Area2D<>::
+swaparea.tscn::PackedScene::676921025439281474::1731651665::0::1::::<><>::res://Scripts/swaparea.gd
