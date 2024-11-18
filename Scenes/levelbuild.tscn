@@ -1,0 +1,99 @@
+[gd_scene load_steps=17 format=3 uid="uid://5e077u0v5mks"]
+
+[ext_resource type="Texture2D" uid="uid://b7hog8ffbgv1j" path="res://ArtAssets/Envy Level (Dif color).png" id="1_gaje3"]
+[ext_resource type="Script" path="res://Scripts/levelbuild.gd" id="1_qb340"]
+[ext_resource type="Texture2D" uid="uid://ckkelnsc7qypf" path="res://ArtAssets/EnvyLevel1/Background.png" id="2_4gn4u"]
+[ext_resource type="PackedScene" uid="uid://cp546qal6swbg" path="res://Scenes/LevelScenes/stone_5.tscn" id="2_lroa1"]
+[ext_resource type="PackedScene" uid="uid://btd7l5d8fwhd" path="res://Scenes/LevelScenes/sidestone.tscn" id="3_03xko"]
+[ext_resource type="PackedScene" uid="uid://dfmrpvv1ssumm" path="res://Scenes/LevelScenes/stone_1.tscn" id="4_qu3vl"]
+[ext_resource type="PackedScene" uid="uid://ccjdr0xgftyan" path="res://Scenes/SwappedCam.tscn" id="4_uq3we"]
+[ext_resource type="PackedScene" uid="uid://b4bcnla2ydo35" path="res://Scenes/LevelScenes/stone_2.tscn" id="5_fk0bp"]
+[ext_resource type="PackedScene" uid="uid://bb8178illx326" path="res://Scenes/LevelScenes/stone_3.tscn" id="6_asbff"]
+[ext_resource type="PackedScene" uid="uid://ctkbjpmugk6hx" path="res://Scenes/LevelScenes/stone_8.tscn" id="7_plr2p"]
+[ext_resource type="PackedScene" uid="uid://cjh84v4nkiq26" path="res://Scenes/LevelScenes/stone_11.tscn" id="8_nkica"]
+[ext_resource type="Texture2D" uid="uid://hl2umy45dj37" path="res://icon.svg" id="10_jauv8"]
+[ext_resource type="PackedScene" uid="uid://dcv56raghnpdu" path="res://Scenes/playerscene.tscn" id="12_7kgsj"]
+[ext_resource type="Script" path="res://Scripts/Souls.gd" id="12_jj12b"]
+[ext_resource type="PackedScene" uid="uid://cfu7ehkmbrjkd" path="res://Scenes/despawnsouls.tscn" id="13_r68tk"]
+[ext_resource type="PackedScene" uid="uid://jv514xqb66li" path="res://Scenes/swaparea.tscn" id="15_sk6eg"]
+
+[node name="Levelbuild" type="Node2D"]
+script = ExtResource("1_qb340")
+
+[node name="EnvyLevel(difColor)" type="Sprite2D" parent="."]
+position = Vector2(492, -2639)
+texture = ExtResource("1_gaje3")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(7201, -58)
+texture = ExtResource("2_4gn4u")
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1023, 810)
+scale = Vector2(3.35156, 3.10156)
+texture = ExtResource("10_jauv8")
+
+[node name="Player2D" parent="." instance=ExtResource("12_7kgsj")]
+position = Vector2(941, 613)
+scale = Vector2(3.3, 3.3)
+SPEED = 1200.0
+JUMP_VELOCITY = -2200.0
+gravity = 4000
+
+[node name="Stones" type="Node" parent="."]
+
+[node name="Stone7" parent="Stones" instance=ExtResource("2_lroa1")]
+position = Vector2(1986, -4573)
+
+[node name="sidestone" parent="Stones" instance=ExtResource("3_03xko")]
+position = Vector2(524, -2614)
+
+[node name="Stone1" parent="Stones" instance=ExtResource("4_qu3vl")]
+position = Vector2(-910, 594)
+
+[node name="Stone3" parent="Stones" instance=ExtResource("5_fk0bp")]
+position = Vector2(726, -225)
+rotation = 2.61799
+
+[node name="Stone4" parent="Stones" instance=ExtResource("6_asbff")]
+position = Vector2(-984, -1114)
+
+[node name="Stone5" parent="Stones" instance=ExtResource("7_plr2p")]
+position = Vector2(1043, -2400)
+scale = Vector2(0.64, 0.64)
+
+[node name="Stone6" parent="Stones" instance=ExtResource("8_nkica")]
+position = Vector2(1473, -4581)
+
+[node name="Souls" type="Node" parent="."]
+script = ExtResource("12_jj12b")
+
+[node name="UpSpawnerBot" type="Node2D" parent="."]
+position = Vector2(-1066, 1349)
+
+[node name="UpSpawnerBot2" type="Node2D" parent="."]
+position = Vector2(105, 1335)
+
+[node name="DownSpawnerTop" type="Node2D" parent="."]
+position = Vector2(-65, -704)
+
+[node name="Despawnsouls" parent="." instance=ExtResource("13_r68tk")]
+position = Vector2(-722, 954)
+scale = Vector2(4.2, 1)
+
+[node name="Camera1" parent="." instance=ExtResource("4_uq3we")]
+position = Vector2(393, 1439)
+position_smoothing_enabled = true
+
+[node name="Swaparea" parent="." instance=ExtResource("15_sk6eg")]
+position = Vector2(332, -81)
+scale = Vector2(9, 3)
+mynum = 2
+
+[node name="CameraSpots" type="Node" parent="."]
+
+[node name="Camcenter1" type="Node2D" parent="CameraSpots" groups=["camspots"]]
+
+[node name="Camcenter2" type="Node2D" parent="CameraSpots" groups=["camspots"]]
+position = Vector2(0, -860)

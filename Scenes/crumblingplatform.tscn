@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://kxbyxfsn816"]
+
+[ext_resource type="Texture2D" uid="uid://bu5map7wn8xuq" path="res://WUntitled.png" id="1_k31x2"]
+[ext_resource type="Script" path="res://Scripts/crumblingplatform.gd" id="1_mamta"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnsnr"]
+size = Vector2(417, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wq8mb"]
+size = Vector2(422, 32)
+
+[node name="crumble" type="Node2D"]
+script = ExtResource("1_mamta")
+
+[node name="WUntitled" type="Sprite2D" parent="."]
+scale = Vector2(1, 0.0976253)
+texture = ExtResource("1_k31x2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="StandonColl" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_lnsnr")
+
+[node name="breaktime" type="Timer" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Areacheckcoll" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_wq8mb")
+
+[node name="respawntime" type="Timer" parent="."]
+
+[connection signal="timeout" from="breaktime" to="." method="_on_breaktime_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="respawntime" to="." method="_on_respawntime_timeout"]

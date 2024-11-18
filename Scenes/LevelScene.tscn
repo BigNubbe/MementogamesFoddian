@@ -1,0 +1,121 @@
+[gd_scene load_steps=9 format=3 uid="uid://dpgxvu1c2l63r"]
+
+[ext_resource type="PackedScene" uid="uid://ye0o8b8noc54" path="res://Scenes/groundplaceholder.tscn" id="1_ps6nu"]
+[ext_resource type="PackedScene" uid="uid://dcv56raghnpdu" path="res://Scenes/playerscene.tscn" id="2_2gvgf"]
+[ext_resource type="PackedScene" uid="uid://d04nkogcbndy3" path="res://Scenes/RotateIllusoryInvisiblePlatform.tscn" id="3_fv365"]
+[ext_resource type="PackedScene" uid="uid://lsowbbdyldep" path="res://Scenes/latchable.tscn" id="4_7l70o"]
+[ext_resource type="PackedScene" uid="uid://kxbyxfsn816" path="res://Scenes/crumblingplatform.tscn" id="5_k083e"]
+[ext_resource type="PackedScene" uid="uid://dfmrpvv1ssumm" path="res://Scenes/LevelScenes/stone_1.tscn" id="6_4ebte"]
+[ext_resource type="PackedScene" uid="uid://btd7l5d8fwhd" path="res://Scenes/LevelScenes/sidestone.tscn" id="7_a5ky8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gdrd"]
+size = Vector2(2388.5, 4)
+
+[node name="GameRoot" type="Node2D"]
+
+[node name="Ground" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(437, -96)
+scale = Vector2(1.28, 0.16)
+
+[node name="Ground3" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(-34, 478)
+scale = Vector2(1.96441, -0.149666)
+
+[node name="Ground4" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(649, 243)
+scale = Vector2(0.460619, -0.197788)
+
+[node name="Ground5" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(-323, 203)
+scale = Vector2(0.284411, -0.149666)
+
+[node name="Ground6" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(-342, -287)
+scale = Vector2(1.96441, -0.149666)
+
+[node name="Ground10" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(-632, -871)
+scale = Vector2(1.96441, -0.149666)
+
+[node name="Ground11" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(244, -1092)
+scale = Vector2(1.96441, -0.149666)
+
+[node name="Ground14" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(833, -1094)
+scale = Vector2(1.04441, -0.149666)
+
+[node name="Ground7" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(294, -477)
+scale = Vector2(0.16441, -0.149666)
+
+[node name="Ground8" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(87, -668)
+scale = Vector2(0.16441, -0.149666)
+
+[node name="Ground9" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(-157, -728)
+scale = Vector2(0.16441, -0.149666)
+
+[node name="CharacterBody2D" parent="." groups=["Player"] instance=ExtResource("2_2gvgf")]
+position = Vector2(47, 234)
+
+[node name="Ground2" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(-704, -424)
+rotation = 1.5708
+scale = Vector2(6.51343, -0.26568)
+
+[node name="Ground12" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(663, 154)
+rotation = 1.5708
+scale = Vector2(2.23341, -0.26568)
+
+[node name="Ground13" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(961, -1852)
+rotation = 1.5708
+scale = Vector2(3.83341, -0.26568)
+
+[node name="Camera1" type="Camera2D" parent="."]
+position = Vector2(-4, 90)
+zoom = Vector2(0.8, 0.8)
+
+[node name="Camera2" type="Camera2D" parent="."]
+position = Vector2(-3, -702)
+zoom = Vector2(0.8, 0.8)
+
+[node name="Camera3" type="Camera2D" parent="."]
+position = Vector2(-3, -1637)
+zoom = Vector2(0.6, 0.6)
+
+[node name="Transition1" type="Area2D" parent="." groups=["transition"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transition1"]
+position = Vector2(157, -289)
+shape = SubResource("RectangleShape2D_7gdrd")
+
+[node name="Transition2" type="Area2D" parent="." groups=["transition"]]
+position = Vector2(111, -659)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transition2"]
+position = Vector2(5, -423)
+shape = SubResource("RectangleShape2D_7gdrd")
+
+[node name="Node2D" parent="." instance=ExtResource("3_fv365")]
+position = Vector2(393, 186)
+scale = Vector2(0.4, 0.4)
+platformtype = "Rotating"
+
+[node name="Latchable2" parent="." instance=ExtResource("4_7l70o")]
+position = Vector2(-139, 124)
+scale = Vector2(0.270043, 0.74)
+direction = 1
+
+[node name="crumble" parent="." instance=ExtResource("5_k083e")]
+position = Vector2(-469, 281)
+
+[node name="Stone1" parent="." instance=ExtResource("6_4ebte")]
+position = Vector2(190, 169)
+scale = Vector2(0.3, 0.3)
+
+[node name="Stone2" parent="." instance=ExtResource("7_a5ky8")]
+position = Vector2(1074, -2964)

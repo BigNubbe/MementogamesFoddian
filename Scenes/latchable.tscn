@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://lsowbbdyldep"]
+
+[ext_resource type="Script" path="res://Scripts/latchable.gd" id="1_iofdt"]
+[ext_resource type="Texture2D" uid="uid://bu5map7wn8xuq" path="res://WUntitled.png" id="1_pf2nk"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_o7ema"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pukj6"]
+size = Vector2(3, 380)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8y0o"]
+size = Vector2(166, 514)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7vpj"]
+size = Vector2(427, 389)
+
+[node name="Latchable" type="Node2D" groups=["soul"]]
+script = ExtResource("1_iofdt")
+
+[node name="WUntitled" type="Sprite2D" parent="."]
+self_modulate = Color(0.463468, 0.0455054, 7.21961e-08, 1)
+texture = ExtResource("1_pf2nk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_o7ema")
+
+[node name="CollshapeL" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-205.5, 0)
+shape = SubResource("RectangleShape2D_pukj6")
+
+[node name="CollshapeR" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(208, 0)
+shape = SubResource("RectangleShape2D_pukj6")
+
+[node name="disabletop" type="Area2D" parent="."]
+visible = false
+position = Vector2(7, -21.5)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="disabletop"]
+position = Vector2(0, -54.5)
+shape = SubResource("RectangleShape2D_d8y0o")
+
+[node name="Area2D" type="Area2D" parent="." groups=["soul"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -2.5)
+shape = SubResource("RectangleShape2D_n7vpj")
+
+[connection signal="body_entered" from="disabletop" to="." method="_on_disabletop_body_entered"]
+[connection signal="body_exited" from="disabletop" to="." method="_on_disabletop_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

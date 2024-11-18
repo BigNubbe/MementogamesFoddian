@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpgxvu1c2l63r"]
+
+[ext_resource type="PackedScene" uid="uid://ye0o8b8noc54" path="res://Scenes/groundplaceholder.tscn" id="1_ps6nu"]
+[ext_resource type="PackedScene" uid="uid://dcv56raghnpdu" path="res://Scenes/playerscene.tscn" id="2_2gvgf"]
+[ext_resource type="Script" path="res://Scripts/CamController.gd" id="3_7pl3w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gdrd"]
+size = Vector2(2388.5, 4)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Ground" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(368, 256)
+scale = Vector2(1.28, 0.08)
+
+[node name="Ground3" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(-105, 381)
+scale = Vector2(1.96441, -0.149666)
+
+[node name="Ground4" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(-336, 83)
+scale = Vector2(1.96441, -0.149666)
+
+[node name="Ground5" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(495, -102)
+scale = Vector2(1.96441, -0.149666)
+
+[node name="Ground6" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(-342, -287)
+scale = Vector2(1.96441, -0.149666)
+
+[node name="Ground10" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(-666, -777)
+scale = Vector2(1.96441, -0.149666)
+
+[node name="Ground11" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(244, -977)
+scale = Vector2(1.96441, -0.149666)
+
+[node name="Ground7" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(173, -407)
+scale = Vector2(0.16441, -0.149666)
+
+[node name="Ground8" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(331, -528)
+scale = Vector2(0.16441, -0.149666)
+
+[node name="Ground9" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(-38.9999, -657)
+scale = Vector2(0.16441, -0.149666)
+
+[node name="CharacterBody2D" parent="." groups=["Player"] instance=ExtResource("2_2gvgf")]
+position = Vector2(-31, 206)
+
+[node name="Ground2" parent="." instance=ExtResource("1_ps6nu")]
+position = Vector2(669, 223)
+rotation = 1.5708
+scale = Vector2(1, 0.120009)
+
+[node name="Camera1" type="Camera2D" parent="."]
+position = Vector2(-4, 90)
+
+[node name="Camera2" type="Camera2D" parent="."]
+position = Vector2(-3, -548)
+
+[node name="Camera3" type="Camera2D" parent="."]
+position = Vector2(-3, -1178)
+
+[node name="CamController" type="Node" parent="."]
+script = ExtResource("3_7pl3w")
+
+[node name="Transition1" type="Area2D" parent="." groups=["transition"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transition1"]
+position = Vector2(86, -263)
+shape = SubResource("RectangleShape2D_7gdrd")
+
+[node name="Transition2" type="Area2D" parent="." groups=["transition"]]
+position = Vector2(111, -659)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transition2"]
+position = Vector2(5, -263)
+shape = SubResource("RectangleShape2D_7gdrd")
+
+[connection signal="body_entered" from="Transition1" to="CamController" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Transition2" to="CamController" method="_on_area_2d_body_entered"]

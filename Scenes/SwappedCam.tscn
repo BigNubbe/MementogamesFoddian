@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccjdr0xgftyan"]
+
+[ext_resource type="Script" path="res://Scripts/Camscript.gd" id="1_t8rvx"]
+
+[node name="Swapcam" type="Camera2D"]
+position = Vector2(400, 38)
+zoom = Vector2(0.189, 0.189)
+script = ExtResource("1_t8rvx")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb8178illx326"]
+
+[ext_resource type="Texture2D" uid="uid://o1owsslsk46n" path="res://ArtAssets/EnvyLevel1/Stone 3.png" id="1_iuoxr"]
+
+[node name="Stone2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_iuoxr")
+offset = Vector2(2157, -2762)
+
+[node name="Staticbod" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Staticbod"]
+polygon = PackedVector2Array(-296, 191, -203, 208, -106, 208, -80, 191, -13, 171, 58, 183, 150, 154, 175, 169, 372, 171, 453, 141, 490, 132, 508, 99, 498, 62, 495, -14, 419, -81, 352, -157, 162, -165, 147, -153, 113, -182, 36, -187, 10, -165, -27, -190, -156, -204, -237, -201, -329, -133, -338, -83, -368, -47, -405, 6, -400, 48, -338, 116, -312, 132)

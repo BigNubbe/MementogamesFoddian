@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d04nkogcbndy3"]
+
+[ext_resource type="Script" path="res://Scripts/RotatingPlatform.gd" id="1_7ne5y"]
+[ext_resource type="Texture2D" uid="uid://bu5map7wn8xuq" path="res://WUntitled.png" id="2_nb00c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_si5lv"]
+size = Vector2(417, 385)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_7ne5y")
+rotspeed = 7.0
+platformtype = "Illusory"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.683107, 0.000368778, 0.687396, 1)
+texture = ExtResource("2_nb00c")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_si5lv")
